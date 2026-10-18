@@ -1,0 +1,85 @@
+{
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "htmlMs": 251,
+      "h1Count": 1,
+      "title": "Eduardson Cortez | Web Developer &amp; System Designer",
+      "hasDescription": true,
+      "hasShareImage": true,
+      "htmlGzipKB": 17.7,
+      "initialJSGzipKB": 182.4
+    },
+    {
+      "route": "/start-a-project",
+      "status": 200,
+      "htmlMs": 99,
+      "h1Count": 1,
+      "title": "Start a Project | Eduardson Cortez",
+      "hasDescription": true,
+      "hasShareImage": true,
+      "htmlGzipKB": 4,
+      "initialJSGzipKB": 179.9
+    },
+    {
+      "route": "/projects/siglatech-solutions",
+      "status": 200,
+      "htmlMs": 45,
+      "h1Count": 1,
+      "title": "SiglaTech Solutions | Eduardson Cortez",
+      "hasDescription": true,
+      "hasShareImage": true,
+      "htmlGzipKB": 5.2,
+      "initialJSGzipKB": 182
+    },
+    {
+      "route": "/projects/datashield-ph",
+      "status": 200,
+      "htmlMs": 30,
+      "h1Count": 1,
+      "title": "DataShield PH | Eduardson Cortez",
+      "hasDescription": true,
+      "hasShareImage": true,
+      "htmlGzipKB": 5.3,
+      "initialJSGzipKB": 182
+    },
+    {
+      "route": "/projects/eventify",
+      "status": 200,
+      "htmlMs": 32,
+      "h1Count": 1,
+      "title": "Eventify | Eduardson Cortez",
+      "hasDescription": true,
+      "hasShareImage": true,
+      "htmlGzipKB": 5.2,
+      "initialJSGzipKB": 182
+    },
+    {
+      "route": "/projects/upcm-repository",
+      "status": 200,
+      "htmlMs": 32,
+      "h1Count": 1,
+      "title": "UPCM Repository | Eduardson Cortez",
+      "hasDescription": true,
+      "hasShareImage": true,
+      "htmlGzipKB": 5.3,
+      "initialJSGzipKB": 182
+    },
+    {
+      "route": "/projects/henry-sy-building-guide",
+      "status": 200,
+      "htmlMs": 33,
+      "h1Count": 1,
+      "title": "Henry Sy Sr. MSB Guide | Eduardson Cortez",
+      "hasDescription": true,
+      "hasShareImage": true,
+      "htmlGzipKB": 5.2,
+      "initialJSGzipKB": 182
+    }
+  ],
+  "unknownProjectStatus": 404,
+  "robots": "User-Agent: *\nDisallow: /\n\n",
+  "sitemap": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n</urlset>\n",
+  "note": "Local production HTTP check; gzip sizes are calculated estimates, not Lighthouse or field Core Web Vitals."
+}
