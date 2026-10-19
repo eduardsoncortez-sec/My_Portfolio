@@ -23,10 +23,10 @@ Stop the development server before starting production on the same port.
 
 ## Live deployment
 
-- Website: https://my-portfolio-self-seven-95.vercel.app
+- Website: https://eduardson-cortez.vercel.app
 - GitHub: https://github.com/eduardsoncortez-sec/My_Portfolio
 - Vercel project: `eduardson/my-portfolio`, connected to the `main` branch.
-- Production configuration: `SITE_URL=https://my-portfolio-self-seven-95.vercel.app`.
+- Production configuration: `SITE_URL=https://eduardson-cortez.vercel.app`.
 
 Pushes to `main` trigger a new production deployment. Keep `SITE_URL` in the Production environment only so preview builds remain unindexed. If the public domain changes, update this variable and redeploy.
 
