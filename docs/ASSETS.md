@@ -2,11 +2,11 @@
 
 The project screenshots were supplied by the user. Original PNGs are preserved in public/images; Next.js serves optimized versions. Browser chrome is concealed with CSS, not baked image edits.
 
-The active portrait, public/images/eduardson-graduation-glasses.jpg, is the original graduation photograph supplied by the owner on October 19, 2026 (CORTEZ, Eduardson (2 of 5).jpg). It is copied without image edits; CSS frames the photo and Next.js serves optimized sizes. It replaces the earlier AI-extracted mockup portrait. The unused historical assets remain at public/images/eduardson-portrait.png and public/images/portrait-reference.png.
+The preserved source, public/images/eduardson-graduation-glasses.jpg, is the original graduation photograph supplied by the owner on October 19, 2026 (CORTEZ, Eduardson (2 of 5).jpg). The source is retained without edits. The current hero uses the transparent derivative documented below, with CSS framing and Next.js image optimization. The unused historical assets remain at public/images/eduardson-portrait.png and public/images/portrait-reference.png.
 
 The computer workbench image is generated, generic illustrative imagery, labeled as illustrative in the page. It is not claimed as a photograph of the owner's work.
 
-The historical cutout and the workshop illustration used the built-in ImageGen tool (no CLI/API fallback). The active graduation photograph is not generated.
+The historical cutout and the workshop illustration used the built-in ImageGen tool (no CLI/API fallback). The active hero now uses an ImageGen background-extraction edit of the original, at public/images/eduardson-graduation-cutout.png. The untouched original remains available at public/images/eduardson-graduation-glasses.jpg. The edit requested identity, glasses, clothing and pose preservation; it is an AI-processed cutout, not the untouched source.
 
 ## Portrait — public/images/eduardson-portrait.png
 

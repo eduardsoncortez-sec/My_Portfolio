@@ -3,8 +3,8 @@ export const profile = {
   email: "eduardcortez05@gmail.com",
   facebook: "https://www.facebook.com/profile.php?id=61590826374392",
   studio: "https://siglatechsolutions.com/",
-  // Original graduation photograph supplied by the owner, displayed with CSS framing.
-  portrait: "/images/eduardson-graduation-glasses.jpg",
+  // Background-removed version of the owner-supplied graduation photo; original retained.
+  portrait: "/images/eduardson-graduation-cutout.png",
   portraitIsReference: false,
   portraitAlt: "Eduardson Cortez wearing gold-tinted glasses, a black graduation cap and gown, and a gold GK College stole",
   servicingImage: "/images/computer-workshop.png",

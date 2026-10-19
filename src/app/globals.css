@@ -557,3 +557,30 @@ h1 em { background:linear-gradient(110deg,#f6da9d,#d5a856); background-clip:text
   .review-actions .text-button { justify-content:center; }
   .inquiry-direct { align-items:flex-start; font-size:11px; }
 }
+
+/* Portrait composition: transparent subject with unobstructed head and cap. */
+.portrait-composition::before { content:""; position:absolute; inset:7% 0 9% 8%; border-radius:50%; background:radial-gradient(ellipse at 58% 42%,#d7ac5b20,transparent 62%),radial-gradient(ellipse at 50% 58%,#23496388,transparent 72%); z-index:0; }
+.portrait-composition .portrait-orbit { width:81%; height:81%; top:10%; right:0; border-color:#d5b56f30; box-shadow:0 0 0 18px #d5b56f04,0 0 0 19px #d5b56f0c; }
+.portrait-composition .portrait-window { left:12%; top:0; width:86%; height:94%; border:0; border-radius:0; mask-image:linear-gradient(to bottom,#000 75%,transparent 100%); }
+.portrait-composition .portrait-window img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+.portrait-composition .portrait-caption { top:auto; right:0; bottom:4%; padding:13px 16px; font-size:13px; background:#0b1d2cf5; border-left:2px solid var(--gold); }
+.portrait-composition .experience-float { left:0; bottom:17%; padding:16px 20px; gap:13px; }
+.portrait-composition .experience-float strong { font-size:24px; }
+.portrait-composition .hero-mockup { width:44%; opacity:.3; }
+.portrait-composition .mockup-0 { left:-5%; top:23%; transform:rotate(-11deg); }
+.portrait-composition .mockup-1 { right:-3%; top:47%; transform:rotate(9deg); }
+.portrait-composition .visual-index { display:none; }
+@media(max-width:900px) and (min-width:641px) {
+ .portrait-composition .experience-float { left:0; bottom:8%; padding:12px; }
+ .portrait-composition .experience-float strong { font-size:21px; }
+ .portrait-composition .portrait-caption { display:none; }
+}
+@media(max-width:640px) {
+ .hero-visual.portrait-composition { aspect-ratio:1; margin-top:26px; margin-bottom:10px; }
+ .portrait-composition .portrait-window { left:8%; width:90%; height:94%; }
+ .portrait-composition .portrait-caption { display:flex; right:0; bottom:0; padding:10px 12px; font-size:10px; gap:7px; }
+ .portrait-composition .experience-float { left:0; bottom:17%; padding:11px 13px; gap:9px; }
+ .portrait-composition .experience-float strong { font-size:21px; }
+ .portrait-composition .experience-float small { max-width:110px; line-height:1.5; }
+ .portrait-composition .hero-mockup { opacity:.22; }
+}

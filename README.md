@@ -44,7 +44,7 @@ There are five featured projects, eight services, About and skills sections, two
 
 ## Replace temporary assets
 
-The hero uses the owner's original graduation photograph with gold-tinted glasses at `/public/images/eduardson-graduation-glasses.jpg`. CSS frames the unedited photo, and Next.js serves optimized sizes. `profile.portrait` can point to a replacement asset; update its dimensions in the hero image component when replacing it.
+The hero uses a transparent cutout derived from the owner's graduation photo with gold-tinted glasses at `/public/images/eduardson-graduation-cutout.png`. The original is retained at `/public/images/eduardson-graduation-glasses.jpg`. ImageGen removed the studio background; CSS provides the navy-and-gold composition, and Next.js serves optimized sizes. `profile.portrait` can point to a replacement asset; update its dimensions in the hero image component when replacing it.
 
 Certification cards display the supplied qualifications without invented certificate scans, certificate numbers, dates, or license claims. To add a scan, place it in `public/images/` and set the corresponding `certifications[].image` path in `src/content/portfolio.ts`; the card will expose a View certificate link.
 
