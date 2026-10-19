@@ -19,7 +19,16 @@ npm.cmd run build
 npm.cmd start
 ```
 
-Stop the development server before starting production on the same port. This project has been built locally; it has not been deployed to a public host.
+Stop the development server before starting production on the same port.
+
+## Live deployment
+
+- Website: https://my-portfolio-self-seven-95.vercel.app
+- GitHub: https://github.com/eduardsoncortez-sec/My_Portfolio
+- Vercel project: `eduardson/my-portfolio`, connected to the `main` branch.
+- Production configuration: `SITE_URL=https://my-portfolio-self-seven-95.vercel.app`.
+
+Pushes to `main` trigger a new production deployment. Keep `SITE_URL` in the Production environment only so preview builds remain unindexed. If the public domain changes, update this variable and redeploy.
 
 ## Edit the portfolio
 
@@ -65,7 +74,7 @@ Original portrait, certificate scans, and real computer-servicing photos are pen
 
 ## SEO and deployment configuration
 
-Copy `.env.example` to `.env.local` and set `SITE_URL` to the final public origin before a production deployment. Rebuild after changing it. This configures canonical URLs, social-image URLs, sitemap entries, and indexing. With no public origin configured, the local preview is intentionally non-indexable and has an empty sitemap. No public deployment was performed.
+Set `SITE_URL` in the hosting provider's Production environment to the public origin, then rebuild. This configures canonical URLs, social-image URLs, sitemap entries, and indexing. For local SEO checks, copy `.env.example` to `.env.local` and set the same value. With no public origin configured, the local preview is intentionally non-indexable and has an empty sitemap.
 
 ## Updated verification
 
