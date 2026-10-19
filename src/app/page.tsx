@@ -53,7 +53,7 @@ export default function Home() {
           <div className="hero-visual">
             <span className="portrait-orbit" aria-hidden="true" />
             <div className="hero-mockups" aria-hidden="true">{[projects[0], projects[1]].map((project, index) => <div key={project.slug} className={`hero-mockup mockup-${index}`}><div className="mockup-toolbar"><i /><i /><i /><span>{project.title}</span></div><div className="mockup-screen"><Image src={project.image} alt="" width={640} height={325} sizes="280px" /></div></div>)}</div>
-            <div className={`portrait-window ${profile.portraitIsReference ? "from-reference" : ""}`}><Image src={profile.portrait} alt={profile.portraitAlt} width={1432} height={1116} preload sizes="(max-width: 700px) 100vw, 600px" /></div>
+            <div className={`portrait-window ${profile.portraitIsReference ? "from-reference" : "original-photo"}`}><Image src={profile.portrait} alt={profile.portraitAlt} width={3775} height={5029} preload sizes="(max-width: 700px) 100vw, 600px" /></div>
             <div className="portrait-caption"><span className="small-star">✦</span><span>Digital skills.<br /><em>Real-world experience.</em></span></div>
             <div className="experience-float"><Zap size={25} /><span><strong>10 years</strong><small>of hands-on electrical experience</small></span></div>
             <span className="visual-index" aria-hidden="true">IDEAS INTO REAL SOLUTIONS — EC</span>

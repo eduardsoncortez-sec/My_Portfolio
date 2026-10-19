@@ -44,7 +44,7 @@ There are five featured projects, eight services, About and skills sections, two
 
 ## Replace temporary assets
 
-The hero portrait is an AI-extracted asset from the supplied design mockup. It is temporary, and facial details may differ from the original photograph. Replace `/public/images/eduardson-portrait.png` with the original graduation portrait when available. `profile.portrait` can point to a different asset; keep `portraitIsReference: false` for a standalone photo.
+The hero uses the owner's original graduation photograph with gold-tinted glasses at `/public/images/eduardson-graduation-glasses.jpg`. CSS frames the unedited photo, and Next.js serves optimized sizes. `profile.portrait` can point to a replacement asset; update its dimensions in the hero image component when replacing it.
 
 Certification cards display the supplied qualifications without invented certificate scans, certificate numbers, dates, or license claims. To add a scan, place it in `public/images/` and set the corresponding `certifications[].image` path in `src/content/portfolio.ts`; the card will expose a View certificate link.
 
@@ -70,7 +70,7 @@ Each project now has a `/projects/[slug]` detail page, with purpose, features, a
 
 The owner confirmed permission to publicly feature both UPCM projects, including screenshots and demo links. Demo and prototype labels remain accurate.
 
-Original portrait, certificate scans, and real computer-servicing photos are pending from the owner. Set `profile.portrait` and `profile.portraitAlt` when the original portrait arrives. To replace the workshop illustration, update `profile.servicingImage`, `profile.servicingImageAlt`, and set `profile.servicingImageIsIllustration` to `false`. Add more real images to `workPhotos` using `{ src, alt, caption }`; the gallery appears automatically. Certificate images use `certifications[].image`.
+The original portrait has been supplied and added. Certificate scans and real computer-servicing photos are still pending from the owner. To replace the workshop illustration, update `profile.servicingImage`, `profile.servicingImageAlt`, and set `profile.servicingImageIsIllustration` to `false`. Add more real images to `workPhotos` using `{ src, alt, caption }`; the gallery appears automatically. Certificate images use `certifications[].image`.
 
 ## SEO and deployment configuration
 
