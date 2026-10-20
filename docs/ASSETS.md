@@ -2,7 +2,7 @@
 
 The project screenshots were supplied by the user. Original PNGs are preserved in public/images; Next.js serves optimized versions. Browser chrome is concealed with CSS, not baked image edits.
 
-The preserved source, public/images/eduardson-graduation-glasses.jpg, is the original graduation photograph supplied by the owner on October 19, 2026 (CORTEZ, Eduardson (2 of 5).jpg). The source is retained without edits. The current hero uses the transparent derivative documented below, with CSS framing and Next.js image optimization. The unused historical assets remain at public/images/eduardson-portrait.png and public/images/portrait-reference.png.
+The preserved source, public/images/eduardson-graduation-glasses.jpg, is the original graduation photograph supplied by the owner on October 19, 2026 (CORTEZ, Eduardson (2 of 5).jpg). The source is retained without edits. The current hero uses the transparent derivative documented below, with CSS framing and Next.js image optimization. The unused historical portrait cutout remains at public/images/eduardson-portrait.png. The unused full-page mockup was removed from public assets as part of the IT-focused content update.
 
 The computer workbench image is generated, generic illustrative imagery, labeled as illustrative in the page. It is not claimed as a photograph of the owner's work.
 

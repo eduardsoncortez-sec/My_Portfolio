@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { navigation } from "@/content/portfolio";
 
 export function Brand() {
-  return <a href="/#home" className="brand" aria-label="Eduardson Cortez, home"><span className="monogram" aria-hidden="true">E<span>C</span></span><span className="brand-name">EDUARDSON CORTEZ<small>PERSONAL PORTFOLIO</small></span></a>;
+  return <Link href="/#home" className="brand" aria-label="Eduardson Cortez, home"><span className="monogram" aria-hidden="true">E<span>C</span></span><span className="brand-name">EDUARDSON CORTEZ<small>PERSONAL PORTFOLIO</small></span></Link>;
 }
 
 export function Header({ homePage = true, activeSection = "home" }: { homePage?: boolean; activeSection?: string }) {

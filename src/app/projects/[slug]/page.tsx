@@ -34,5 +34,5 @@ export default async function ProjectPage({ params }: Props) {
       <section className="approach-panel" aria-labelledby="approach-title"><div><p className="eyebrow"><span />DEVELOPMENT APPROACH</p><h2 id="approach-title">Practical thinking.<br /><em>AI-assisted development.</em></h2></div><div><p>{detail.approach}</p>{detail.note && <p className="project-context">{detail.note}</p>}</div></section>
       <section className="detail-cta"><div><h2>Have a similar idea?</h2><p>Let’s talk about what your website or system needs to do.</p></div><Link className="button button-gold" href="/start-a-project">Start a project<ArrowUpRight size={17} /></Link></section>
       <nav aria-label="Project navigation" className="detail-navigation"><Link href="/#projects"><ArrowLeft size={16} />All projects</Link><Link href={`/projects/${next.slug}`}>Next: {next.title}<ArrowRight size={16} /></Link></nav>
-    </div></main><footer className="simple-footer container">© {new Date().getFullYear()} Eduardson Cortez. <a href="/#contact">Get in touch <ArrowUpRight size={14} /></a></footer></>;
+    </div></main><footer className="simple-footer container">© {new Date().getFullYear()} Eduardson Cortez. <Link href="/#contact">Get in touch <ArrowUpRight size={14} /></Link></footer></>;
 }

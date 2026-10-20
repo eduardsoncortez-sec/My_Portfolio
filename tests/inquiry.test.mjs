@@ -4,6 +4,14 @@ import { buildInquiry, validateInquiry } from "../src/lib/inquiry.ts";
 
 const valid = { service: "Business website", name: " Example Client ", email: " client@example.com ", organization: "", goal: "A school website with an inquiry page and a program directory.", timeline: "", budget: "" };
 
+test("computer support inquiries retain their chosen service in the email draft", () => {
+  const inquiry = { ...valid, service: "Computer servicing / technical support" };
+  assert.deepEqual(validateInquiry(inquiry), {});
+  const draft = buildInquiry(inquiry, "owner@example.com");
+  assert.equal(new URL(draft.mailto).searchParams.get("subject"), `Project inquiry: ${inquiry.service}`);
+  assert.ok(draft.body.includes(`Service: ${inquiry.service}`));
+});
+
 test("missing or whitespace-only required fields cannot advance", () => {
   const errors = validateInquiry({ ...valid, name: "  ", email: "not-an-email", goal: "   ", service: "Unknown" });
   assert.deepEqual(Object.keys(errors).sort(), ["email", "goal", "name", "service"]);

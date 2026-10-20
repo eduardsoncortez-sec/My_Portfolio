@@ -1,0 +1,13 @@
+{
+  "preview": "http://127.0.0.1:3108",
+  "forbiddenContentFound": false,
+  "serviceCards": 7,
+  "skillPanels": 4,
+  "certificateCards": 1,
+  "projectCards": 5,
+  "missingAnchorTargets": [],
+  "computerSupportOptionPresent": true,
+  "checkedAssets": 16,
+  "failedAssets": [],
+  "visualReview": "Pending: browser tool could not start due to environment sandbox helper error."
+}

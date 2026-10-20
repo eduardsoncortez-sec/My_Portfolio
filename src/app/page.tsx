@@ -2,12 +2,12 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { canonical } from "@/lib/site";
 import Link from "next/link";
-import { ArrowDown, ArrowRight, ArrowUpRight, Award, BarChart3, BriefcaseBusiness, Cable, Check, Code2, Cpu, Globe2, GraduationCap, Layers3, Mail, PenTool, Satellite, ShieldCheck, Sun, Wrench, Zap } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, Award, BarChart3, BriefcaseBusiness, Check, Code2, Cpu, Globe2, GraduationCap, Layers3, Mail, PenTool, ShieldCheck, Wrench } from "lucide-react";
 import { Header, Brand } from "@/components/header";
 import { CopyEmail } from "@/components/copy-email";
-import { profile, projects, services, digitalSkills, technicalSkills, certifications, navigation, workPhotos } from "@/content/portfolio";
+import { profile, projects, services, skillGroups, certifications, navigation, workPhotos } from "@/content/portfolio";
 
-const icons = { globe: Globe2, code: Code2, chart: BarChart3, school: GraduationCap, pen: PenTool, layers: Layers3, cpu: Cpu, bolt: Zap };
+const icons = { globe: Globe2, code: Code2, chart: BarChart3, school: GraduationCap, pen: PenTool, layers: Layers3, cpu: Cpu, shield: ShieldCheck };
 
 export const metadata: Metadata = { alternates: canonical("/") };
 
@@ -45,8 +45,8 @@ export default function Home() {
           <div className="hero-copy"><Eyebrow>DEVELOPER. DESIGNER. PROBLEM SOLVER.</Eyebrow>
             <p className="hello">Hello, I’m</p>
             <h1 id="hero-title">Eduardson<br /><em>Cortez.</em></h1>
-            <p className="hero-role">Full-Stack Web Developer <span> / </span> System Designer</p>
-            <p className="hero-description">I build websites, web systems, and digital solutions for schools, businesses, and organizations—with real-world technical experience behind every idea.</p>
+            <p className="hero-role"><span>Full-Stack Web Developer</span><span>System Designer</span><span>Cybersecurity Enthusiast</span></p>
+            <p className="hero-description">I design and develop modern websites, custom web applications, and digital systems for businesses, schools, and organizations. My work focuses on creating practical, secure, and user-friendly solutions through modern technologies and AI-assisted development.</p>
             <div className="hero-actions"><a href="#projects" className="button button-gold">View my work <ArrowUpRight size={18} /></a><Link href="/start-a-project" className="button button-outline">Start a project <ArrowRight size={17} /></Link></div>
             <a className="founder-line" href={profile.studio} target="_blank" rel="noopener noreferrer"><span className="founder-mark"><BriefcaseBusiness size={15} /></span>Founder of <strong>SiglaTech Solutions</strong><ArrowUpRight size={14} /></a>
           </div>
@@ -54,15 +54,14 @@ export default function Home() {
             <span className="portrait-orbit" aria-hidden="true" />
             <div className="hero-mockups" aria-hidden="true">{[projects[0], projects[1]].map((project, index) => <div key={project.slug} className={`hero-mockup mockup-${index}`}><div className="mockup-toolbar"><i /><i /><i /><span>{project.title}</span></div><div className="mockup-screen"><Image src={project.image} alt="" width={640} height={325} sizes="280px" /></div></div>)}</div>
             <div className={`portrait-window ${profile.portraitIsReference ? "from-reference" : "original-photo"}`}><Image src={profile.portrait} alt={profile.portraitAlt} width={1088} height={1448} preload sizes="(max-width: 700px) 100vw, 600px" /></div>
-            <div className="portrait-caption"><span className="small-star">✦</span><span>Digital skills.<br /><em>Real-world experience.</em></span></div>
-            <div className="experience-float"><Zap size={25} /><span><strong>10 years</strong><small>of hands-on electrical experience</small></span></div>
+            <div className="portrait-caption"><span className="small-star">✦</span><span>Thoughtful systems.<br /><em>Practical IT solutions.</em></span></div>
             <span className="visual-index" aria-hidden="true">IDEAS INTO REAL SOLUTIONS — EC</span>
           </div>
         </div>
-        <div className="container hero-footer"><span>BUILT WITH PURPOSE. BACKED BY EXPERIENCE.</span><a href="#services">Explore what I do <ArrowDown size={15} /></a></div>
+        <div className="container hero-footer"><span>WEBSITES. SYSTEMS. PRACTICAL IT SOLUTIONS.</span><a href="#services">Explore what I do <ArrowDown size={15} /></a></div>
       </section>
 
-      <div className="credentials-strip"><div className="container credentials-inner"><div><Code2 /><span>AI-assisted<small>Full-stack development</small></span></div><div><Layers3 /><span>Thoughtful systems<small>From concept to interface</small></span></div><div><Award /><span>Computer Systems Servicing<small>NC II Certification</small></span></div><div><ShieldCheck /><span>Electrical Installation & Maintenance<small>NC II Certification</small></span></div></div></div>
+      <div className="credentials-strip"><div className="container credentials-inner"><div><Code2 /><span>AI-assisted<small>Full-stack development</small></span></div><div><Layers3 /><span>Thoughtful systems<small>From concept to interface</small></span></div><div><Award /><span>Computer Systems Servicing<small>NC II Certification</small></span></div><div><ShieldCheck /><span>Cybersecurity<small>Foundations & privacy projects</small></span></div></div></div>
 
       <section id="services" className="section services-section"><div className="container">
         <SectionHeading eyebrow="WHAT I DO" title="Good ideas deserve" accent="great execution." text="From a first impression online to a system that makes everyday work easier. Here’s how I can help." />
@@ -78,22 +77,20 @@ export default function Home() {
 
       <section id="about" className="section about-section"><div className="container about-grid">
         <div className="about-visual"><div className="workshop-image"><Image src={profile.servicingImage} alt={profile.servicingImageAlt} width={1536} height={1024} sizes="(max-width: 800px) 100vw, 550px" />{profile.servicingImageIsIllustration && <span className="illustration-label">Illustrative image</span>}</div><div className="about-image-caption"><Wrench size={22} /><span>Practical skills.<br /><strong>A problem-solving mindset.</strong></span><span className="caption-line" /></div></div>
-        <div className="about-copy"><Eyebrow>THE PERSON BEHIND THE WORK</Eyebrow><h2>More than<br />just a <em>developer.</em></h2><p>I’m Eduardson Cortez, a web developer, system designer, and the founder of <a href={profile.studio} target="_blank" rel="noopener noreferrer">SiglaTech Solutions</a>.</p><p>My background brings together digital work and 10 years of hands-on experience as an electrician. From troubleshooting a computer to building a web system, I approach problems with patience, practical thinking, and attention to detail.</p><p>I build websites and web systems for businesses, schools, and organizations—combining an AI-assisted development workflow with the perspective that comes from working in the field.</p><div className="about-signoff"><span className="signature">Eduardson Cortez</span><span>FOUNDER · BUILDER · PROBLEM SOLVER</span></div></div>
+        <div className="about-copy"><Eyebrow>THE PERSON BEHIND THE WORK</Eyebrow><h2>Practical thinking.<br /><em>Purposeful technology.</em></h2><p>I’m Eduardson Cortez, a full-stack web developer, system designer, cybersecurity enthusiast, and the founder of <a href={profile.studio} target="_blank" rel="noopener noreferrer">SiglaTech Solutions</a>.</p><p>I build websites and web systems for businesses, schools, and organizations. My experience with computer troubleshooting, reformatting, and PC assembly helps me approach technical problems with patience and attention to detail.</p><p>I use an AI-assisted development workflow to turn ideas into working interfaces and systems. My interest in cybersecurity and data privacy also informs projects such as DataShield PH, a demonstration of privacy-management workflows.</p><div className="about-signoff"><span className="signature">Eduardson Cortez</span><span>FOUNDER · BUILDER · PROBLEM SOLVER</span></div></div>
       </div></section>
 
       {workPhotos.length > 0 && <section className="section work-photos-section"><div className="container"><SectionHeading eyebrow="HANDS-ON WORK" title="From the" accent="workbench." /><div className="work-photo-grid">{workPhotos.map(photo => <figure key={photo.src}><Image src={photo.src} alt={photo.alt} width={1200} height={900} sizes="(max-width: 640px) 100vw, 600px" /><figcaption>{photo.caption}</figcaption></figure>)}</div></div></section>}
 
       <section id="skills" className="section skills-section"><div className="container">
-        <SectionHeading eyebrow="SKILLS & BACKGROUND" title="Two worlds." accent="One practical approach." text="Digital thinking meets hands-on technical experience." />
-        <div className="skills-grid"><article className="skill-panel"><div className="skill-panel-heading"><Code2 /><div><p>DIGITAL & DEVELOPMENT</p><h3>Building for the web</h3></div></div><ul>{digitalSkills.map(skill => <li key={skill}><Check size={15} />{skill}</li>)}</ul></article><article className="skill-panel"><div className="skill-panel-heading"><Wrench /><div><p>HARDWARE & ELECTRICAL</p><h3>Grounded in the real world</h3></div></div><ul>{technicalSkills.map(skill => <li key={skill}><Check size={15} />{skill}</li>)}</ul></article></div>
+        <SectionHeading eyebrow="SKILLS & BACKGROUND" title="Built around" accent="information technology." text="Web development, systems thinking, security foundations, and practical computer support." />
+        <div className="skills-grid">{skillGroups.map(group => { const Icon = icons[group.icon]; return <article className="skill-panel" key={group.title}><div className="skill-panel-heading"><Icon /><div><p>{group.label}</p><h3>{group.title}</h3></div></div><ul>{group.skills.map(skill => <li key={skill}><Check size={15} />{skill}</li>)}</ul></article>; })}</div>
       </div></section>
 
       <section id="certifications" className="section certifications-section"><div className="container">
         <SectionHeading eyebrow="CERTIFICATIONS" title="Trained. Certified." accent="Always building." text="Formal technical training that complements practical experience." />
-        <div className="certifications-grid">{certifications.map(cert => { const Icon = cert.icon === "cpu" ? Cpu : Zap; return <article key={cert.title} className="certificate-card"><div className="certificate-icon"><Icon size={30} strokeWidth={1.4} /></div><div><span className="certificate-label">TESDA NATIONAL CERTIFICATE</span><h3>{cert.title} <span>{cert.level}</span></h3><p>Technical Education and Skills Development Authority</p>{cert.image && <a href={cert.image} target="_blank" rel="noopener noreferrer" className="certificate-preview" aria-label={`View ${cert.title} certificate in a new tab`}><Image src={cert.image} alt={`${cert.title} ${cert.level} certificate`} width={480} height={340} sizes="260px" /><span>View certificate <ArrowUpRight size={14} /></span></a>}</div><Award className="certificate-seal" size={24} /></article>; })}</div>
+        <div className="certifications-grid">{certifications.map(cert => { const Icon = Cpu; return <article key={cert.title} className="certificate-card"><div className="certificate-icon"><Icon size={30} strokeWidth={1.4} /></div><div><span className="certificate-label">TESDA NATIONAL CERTIFICATE</span><h3>{cert.title} <span>{cert.level}</span></h3><p>Technical Education and Skills Development Authority</p>{cert.image && <a href={cert.image} target="_blank" rel="noopener noreferrer" className="certificate-preview" aria-label={`View ${cert.title} certificate in a new tab`}><Image src={cert.image} alt={`${cert.title} ${cert.level} certificate`} width={480} height={340} sizes="260px" /><span>View certificate <ArrowUpRight size={14} /></span></a>}</div><Award className="certificate-seal" size={24} /></article>; })}</div>
       </div></section>
-
-      <section className="venture-section" aria-labelledby="venture-title"><div className="container"><div className="venture-banner"><div className="venture-symbol" aria-hidden="true"><Zap size={56} strokeWidth={1.2} /></div><div className="venture-copy"><span className="coming-soon"><span />COMING SOON</span><h2 id="venture-title">SIGLA Power & Security Services</h2><p>A new chapter in practical solutions for safer, better-connected spaces.</p><div className="venture-services"><span><Zap />Electrical installation</span><span><ShieldCheck />CCTV systems</span><span><Sun />Solar solutions</span><span><Satellite />Starlink / Internet setup</span></div></div><div className="venture-decoration" aria-hidden="true"><Cable /></div></div></div></section>
 
       <section id="contact" className="section contact-section"><div className="container contact-grid"><div><Eyebrow>LET’S BUILD SOMETHING GREAT</Eyebrow><h2>Your next idea.<br /><em>Let’s make it happen.</em></h2><p>A website, a web system, or a technical challenge.<br />Tell me what you have in mind.</p><Link href="/start-a-project" className="button button-gold contact-cta">Start a project <ArrowUpRight size={18} /></Link></div><div className="contact-options"><div className="contact-card"><Mail size={23} /><div><span>EMAIL ME</span><a href={`mailto:${profile.email}`}>{profile.email}<ArrowUpRight size={18} /></a><CopyEmail /></div></div><div className="contact-card"><Facebook size={23} /><div><span>LET’S CONNECT</span><a href={profile.facebook} target="_blank" rel="noopener noreferrer">Find me on Facebook<ArrowUpRight size={18} /></a><p>Message me about your project.</p></div></div><p className="contact-small">Direct conversations. Thoughtful solutions.</p></div></div></section>
     </main>

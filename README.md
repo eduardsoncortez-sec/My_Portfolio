@@ -40,7 +40,7 @@ Pushes to `main` trigger a new production deployment. Keep `SITE_URL` in the Pro
 - `src/app/layout.tsx`: page title, description, and social sharing metadata.
 - `public/images/`: project screenshots, portrait, and illustrative workshop image.
 
-There are five featured projects, eight services, About and skills sections, two NC II certification cards, a coming-soon SIGLA Power & Security Services banner, and direct email/Facebook contact links. No backend, database, contact-form service, or environment secrets are required.
+There are five featured projects, seven IT services, About and four IT skills groups, a Computer Systems Servicing NC II certification card, and direct email/Facebook contact links. No backend, database, contact-form service, or environment secrets are required.
 
 ## Replace temporary assets
 

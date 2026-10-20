@@ -1,4 +1,4 @@
-export const projectTypes = ["Business website", "Web system / dashboard", "School system", "Design / prototype", "Computer / electrical services", "Not sure yet"] as const;
+export const projectTypes = ["Business website", "Web system / dashboard", "School system", "Design / prototype", "Computer servicing / technical support", "Not sure yet"] as const;
 export type Inquiry = { service: string; name: string; email: string; organization: string; goal: string; timeline: string; budget: string };
 
 export function validateInquiry(inquiry: Inquiry) {

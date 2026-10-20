@@ -90,13 +90,15 @@ export const services = [
   { icon: "pen", title: "UI/UX Design", text: "Thoughtful layouts and intuitive interfaces that make your product easier to use." },
   { icon: "layers", title: "System Prototyping", text: "Interactive concepts that help you explore an idea before moving into development." },
   { icon: "cpu", title: "Computer Servicing", text: "PC troubleshooting, reformatting, software installation, assembly, and disassembly." },
-  { icon: "bolt", title: "Electrical & Security", text: "Hands-on electrical installation and maintenance, with CCTV and power-related technical work." },
 ] as const;
 
-export const digitalSkills = ["Full-stack development", "Web design", "UI/UX design", "System design", "Admin dashboards", "School systems", "Interactive prototyping", "AI-assisted workflow"];
-export const technicalSkills = ["Computer reformatting", "PC troubleshooting", "PC assembly & disassembly", "Electrical installation", "Electrical maintenance", "CCTV technical work", "Solar / power background", "Hands-on field experience"];
+export const skillGroups = [
+  { icon: "code", label: "DESIGN & DEVELOPMENT", title: "Web Development & Programming", skills: ["Full-stack web development", "Responsive web design", "UI/UX design", "AI-assisted development workflow"] },
+  { icon: "layers", label: "APPLICATIONS & DATA", title: "Web Systems & Database Management", skills: ["System design & prototyping", "Data-driven application workflows", "Admin dashboards", "School & organizational systems"] },
+  { icon: "shield", label: "SECURITY & PRIVACY", title: "Cybersecurity Foundations", skills: ["Cybersecurity fundamentals", "Security-conscious development", "Data privacy concepts", "DataShield PH demonstration project"] },
+  { icon: "cpu", label: "HARDWARE & SUPPORT", title: "Computer Hardware & Technical Support", skills: ["PC troubleshooting & maintenance", "Computer assembly & disassembly", "Reformatting & OS installation", "Software installation & setup"] },
+] as const;
 
 export const certifications = [
   { title: "Computer Systems Servicing", level: "NC II", icon: "cpu", image: null as string | null },
-  { title: "Electrical Installation & Maintenance", level: "NC II", icon: "bolt", image: null as string | null },
 ];
