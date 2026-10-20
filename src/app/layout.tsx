@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteUrl } from "@/lib/site";
+import { PageMotion } from "@/components/page-motion";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,5 +19,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" data-scroll-behavior="smooth"><body>{children}</body></html>;
+  return <html lang="en" data-scroll-behavior="smooth"><body>{children}<PageMotion /></body></html>;
 }

@@ -43,6 +43,8 @@ export function Header({ homePage = true, activeSection = "home" }: { homePage?:
     <a href="/start-a-project" className="button button-gold header-cta">Start a project <ArrowUpRight size={16} /></a>
     <button id="menu-toggle" className="menu-toggle" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? "Close navigation" : "Open navigation"}>{open ? <X /> : <Menu />}</button>
   </div>
-  {open && <nav className="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation">{navigation.map(({ label, href }) => <a key={href} href={homePage ? href : `/${href}`} onClick={() => setOpen(false)}>{label}<ArrowUpRight size={16} /></a>)}<a href="/start-a-project">Start a project<ArrowUpRight size={16} /></a></nav>}
+  <div className={`mobile-menu ${open ? "is-open" : ""}`} inert={!open} aria-hidden={!open}>
+    <div className="mobile-menu-clip"><nav className="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation">{navigation.map(({ label, href }) => <a key={href} href={homePage ? href : `/${href}`} onClick={() => setOpen(false)}>{label}<ArrowUpRight size={16} /></a>)}<a href="/start-a-project" onClick={() => setOpen(false)}>Start a project<ArrowUpRight size={16} /></a></nav></div>
+  </div>
   </header>;
 }
